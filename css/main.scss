@@ -79,3 +79,43 @@ $on-laptop:        800px;
         }
     }
 }
+
+.padded-top {
+    padding-top: 2rem;
+}
+.padded-bottom {
+    padding-bottom: 2rem;
+}
+.p-padded-top {
+    padding-top: 1rem;
+}
+.p-padded-bottom {
+    padding-bottom: 1rem;
+}
+.half-p-padded-top {
+    padding-top: 0.5rem;
+}
+.half-p-padded-bottom {
+    padding-bottom: 0.5rem;
+}
+
+.headline-popout {
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 30px;
+    z-index: 100;
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.all-caps {
+    text-transform: uppercase !important;
+}
+
+.top-bar-section li a.active {
+    font-weight: bold;
+}
