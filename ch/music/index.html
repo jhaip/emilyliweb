@@ -1,13 +1,13 @@
 ---
 layout: default
-title: news
-category: news
-lang: en
+title: music
+category: music
+lang: ch
 ---
 
 <div class="row p-padded-top">
   <div class="medium-6 medium-centered columns">
-    {% for post in site.categories[page.category] %}{% if post.lang == page.lang %}
+    {% for post in site.categories[page.category] %}
       <div class="row">
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -15,7 +15,7 @@ lang: en
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </div>
-    {% endif %}{% endfor %}
+    {% endfor %}
     <div class="row">
       <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
     </div>

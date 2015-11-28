@@ -210,3 +210,30 @@ body.homepage {
   -o-background-size: cover;
   background-size: cover;
 }
+
+
+.spaced-top {
+    margin-top: 4rem !important;
+}
+.spaced-bottom {
+    margin-bottom: 4rem !important;
+}
+.padded-top {
+    padding-top: 4rem !important;
+}
+.padded-bottom {
+    padding-bottom: 4rem !important;
+}
+.p-padded-top {
+    padding-top: 2rem !important;
+}
+.p-padded-bottom {
+    padding-bottom: 2rem !important;
+}
+
+body, p, strong {
+    font-family: 'Cardo', serif;
+}
+h1, h2, h3, h4, h5, .all-caps {
+    font-family: 'Varela Round', sans-serif !important;
+}

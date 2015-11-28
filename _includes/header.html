@@ -1,7 +1,7 @@
 <header class="site-header">
 
   <div class="row">
-    <div class="small-2 small-centered columns text-center padded-top">
+    <div class="small-2 small-centered columns text-center p-padded-top">
       <a class="" href="{{ site.baseurl }}/"><img src="/assets/emily_signature.png" alt="{{ site.title }}"></a>
     </div>
   </div>
@@ -17,12 +17,23 @@
     <section class="top-bar-section">
       <!-- Left Nav Section -->
       <ul class="left">
-        <li><a href="/" class="all-caps {% if page.title == 'home' %}active{% endif %}">Home</a></li>
-        <li><a href="/about" class="all-caps {% if page.title == 'about' %}active{% endif %}">About</a></li>
-        <li><a href="/news" class="all-caps {% if page.title == 'news' %}active{% endif %}">News</a></li>
-        <li><a href="/music" class="all-caps {% if page.title == 'music' %}active{% endif %}">Music</a></li>
-        <li><a href="/tv" class="all-caps {% if page.title == 'tv' %}active{% endif %}">TV</a></li>
-        <li><a href="/press" class="all-caps {% if page.title == 'press' %}active{% endif %}">Press</a></li>
+        {% if page.lang == 'en' %}
+          <li><a href="/" class="all-caps {% if page.title == 'home' %}active{% endif %}">Home</a></li>
+          <li><a href="/about" class="all-caps {% if page.title == 'about' %}active{% endif %}">About</a></li>
+          <li><a href="/news" class="all-caps {% if page.title == 'news' %}active{% endif %}">News</a></li>
+          <li><a href="/music" class="all-caps {% if page.title == 'music' %}active{% endif %}">Music</a></li>
+          <li><a href="/tv" class="all-caps {% if page.title == 'tv' %}active{% endif %}">TV</a></li>
+          <li><a href="/press" class="all-caps {% if page.title == 'press' %}active{% endif %}">Press</a></li>
+          <li><a href="/ch{{ page.url | replace:'index.html','' }}">中文</a></li>
+        {% else %}
+          <li><a href="/ch/" class="all-caps {% if page.title == 'home' %}active{% endif %}">家</a></li>
+          <li><a href="/ch/about" class="all-caps {% if page.title == 'about' %}active{% endif %}">关于</a></li>
+          <li><a href="/ch/news" class="all-caps {% if page.title == 'news' %}active{% endif %}">新闻</a></li>
+          <li><a href="/ch/music" class="all-caps {% if page.title == 'music' %}active{% endif %}">音乐</a></li>
+          <li><a href="/ch/tv" class="all-caps {% if page.title == 'tv' %}active{% endif %}">电视</a></li>
+          <li><a href="/ch/press" class="all-caps {% if page.title == 'press' %}active{% endif %}">按</a></li>
+          <li><a href="{{ page.url | replace:'/ch','' | replace:'index.html','' }}">EN</a></li>
+        {% endif %}
         <li>{{ page.page_content }}</li>
       </ul>
     </section>
